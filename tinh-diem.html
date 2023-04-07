@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Công thức tính toán học</title>
+    <link rel="stylesheet" href="tinh-diem.css" />
+  </head>
+  <body>
+    <!-- bài tập 1 -->
+    <section class="card">
+      <h3>bài tập 1</h3>
+      <button onclick="average()">Nhập điểm thi</button>
+
+      <script>
+        function average() {
+          const mathMark = Number(prompt(" nhập điểm toán"));
+          const physicsMark = Number(prompt("nhập điểm Lý"));
+
+          const biologyMark = Number(prompt("nhập điểm Sinh"));
+          const sum = mathMark + physicsMark + biologyMark;
+          const average = sum / 3;
+          console.log("kiểm tra tổng điểm", sum, "trung bình cộng", average);
+        }
+      </script>
+    </section>
+    <section class="card">
+      <!-- bài tập 2 -->
+      <h3>bài tập 2</h3>
+      <button onclick="Fehrenheit()">Tính độ C thành độ F</button>
+
+      <script>
+        function Fehrenheit() {
+          const Celsius = Number(prompt("độ C"));
+          const Fehrenheit = (Celsius / 5) * 9 + 32;
+
+          console.log("độ C sang độ F", Fehrenheit);
+        }
+      </script>
+    </section>
+    <!-- bài tập 3 -->
+    <section class="card">
+      <h3>bài tập 3</h3>
+      <button onclick="sArea()">diện tích hình tròn</button>
+      <script>
+        function sArea() {
+          const pi = Number(prompt("pi"));
+          const r = Number(prompt("bán kính hình tròn"));
+          const s = r * r * pi;
+          console.log("Diện tích hình tròn"), s;
+        }
+      </script>
+    </section>
+    <!-- bài tập 4 -->
+    <section class="card">
+      <h3>bài tập 4</h3>
+      <button onclick="cCircle()">chu vi hình tròn</button>
+      <script>
+        function cCircle() {
+          const pi = Number(prompt("pi"));
+          const r = Number(prompt("bán kính hình tròn"));
+          const c = r * 2 * pi;
+          console.log("chu vi hình tròn"), c;
+        }
+      </script>
+    </section>
+  </body>
+</html>

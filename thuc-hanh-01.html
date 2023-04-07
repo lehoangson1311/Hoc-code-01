@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 1 - Tính điểm trung bình</title>
+  </head>
+  <body>
+    <script>
+      // Number (X) ->> chuyển thành number
+      // parselFloat() ->> lấy phần số thực
+      // +
+      // parseInt() ->> lấy phần nguyên
+
+      //   chuyển string thành Number
+      const mathMark = Number(prompt(" nhập điểm toán"));
+      const physicsMark = Number(prompt("nhập điểm Lý"));
+
+      const biologyMark = Number(prompt("nhập điểm Sinh"));
+      const sum = mathMark + physicsMark + biologyMark;
+      const average = sum / 3;
+      console.log("kiểm tra tổng điểm", sum, "trung bình cộng", average);
+
+      // toFixed(x); x là số làm tròn sau dấu phẩy
+    </script>
+  </body>
+</html>

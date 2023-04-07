@@ -1,0 +1,18 @@
+body {
+  display: grid;
+  gap: 30px;
+}
+.card {
+  display: grid;
+  border: 2px solid red;
+  padding: 20px;
+  text-align: center;
+}
+button {
+  position: relative;
+  left: 660px;
+  width: 150px;
+}
+h3 {
+  font-size: 40px;
+}
