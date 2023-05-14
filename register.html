@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../register.css" />
+    <link rel="stylesheet" href="../register-app.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <title>Form login unitop.vn</title>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <form action="" id="form-login">
+        <h1 class="form-heading">Form đăng ký</h1>
+        <div class="form-group">
+          <i class="far fa-user"></i>
+          <input
+            type="text"
+            id="userNameSignup"
+            class="form-input"
+            placeholder="Tên đăng nhập"
+          />
+        </div>
+        <div class="form-group">
+          <i class="fas fa-key"></i>
+          <input
+            type="password"
+            id="passwordSignup"
+            class="form-input"
+            placeholder="Mật khẩu"
+          />
+          <div id="eye">
+            <i onclick="showPassword()" class="far fa-eye"></i>
+          </div>
+        </div>
+        <div class="form-group">
+          <i class="fas fa-key"></i>
+          <input
+            type="password"
+            id="passwordRepeatSignup"
+            class="form-input"
+            placeholder="Nhập lại mật khẩu"
+          />
+          <div id="eye">
+            <i onclick="showPassword2()" class="far fa-eye"></i>
+          </div>
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            id="emailSignup"
+            class="form-input"
+            placeholder="Nhập Email"
+          />
+        </div>
+        <div class="fullName">
+          <div class="form-group">
+            <input
+              type="text"
+              id="firstNameSignup"
+              class="form-input"
+              placeholder="Tên"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              id="lastNameSignup"
+              class="form-input"
+              placeholder="Họ"
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <input
+            type="number"
+            id="ageSignup"
+            class="form-input"
+            placeholder="Tuổi"
+          />
+        </div>
+        <input
+          type="submit"
+          id="submitSignup"
+          value="Xác nhận"
+          class="form-submit"
+          onclick="renderTable()"
+        />
+      </form>
+    </div>
+  </body>
+  <script src="../register.js"></script>
+</html>

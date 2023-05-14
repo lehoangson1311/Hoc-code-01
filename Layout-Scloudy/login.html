@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../login.css" />
+    <link rel="stylesheet" href="../app.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <title>Login</title>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <form action="" id="form-login">
+        <h1 class="form-heading">Form đăng nhập</h1>
+        <div class="form-group">
+          <i class="far fa-user"></i>
+          <input
+            type="text"
+            id="inputUserLogin"
+            class="form-input"
+            placeholder="Tên đăng nhập"
+          />
+        </div>
+        <div class="form-group">
+          <i class="fas fa-key"></i>
+          <input
+            id="inputPasswordLogin"
+            type="password"
+            class="form-input"
+            placeholder="Mật khẩu"
+          />
+          <div id="eye">
+            <i onclick="showPassword()" class="far fa-eye"></i>
+          </div>
+        </div>
+        <input
+          type="submit"
+          id="loginToHome"
+          value="Đăng nhập"
+          class="form-submit"
+        />
+        <div class="bottom">
+          <button class="forget">Quên mật khẩu?</button>
+          <button type="button" class="register" onclick="registerHome()">
+            Đăng ký
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script src="../login.js"></script>
+</html>

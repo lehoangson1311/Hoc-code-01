@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCLOUDY.VN</title>
+    <link rel="stylesheet" href="./trang-chu.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img class="img-logo" src="../Img/cccccc.png" alt="" />
+      </div>
+      <div class="menu">
+        <ul class="tool-menu">
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+
+          <li class="car">
+            <a href="#" class="dropbtn">Car</a>
+            <ul class="dropdown">
+              <li><a href="#">Suv</a></li>
+              <li><a href="#">Sedan</a></li>
+              <li><a href="#">Truck </a></li>
+            </ul>
+          </li>
+
+          <li class="brand">
+            <a href="#" class="dropbtn">brand</a>
+            <ul class="dropdown">
+              <li><a href="#">Mec</a></li>
+              <li><a href="#">Bmw</a></li>
+              <li><a href="#">Volvo </a></li>
+              <li><a href="#">Audi </a></li>
+            </ul>
+          </li>
+
+          <li class="contact">
+            <a href="http://127.0.0.1:5500/userManager.html">Manager</a>
+          </li>
+        </ul>
+      </div>
+      <div class="search">
+        <input
+          class="search-button"
+          type="search"
+          name="search-button"
+          placeholder="Search.."
+        />
+        <button class="search-icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+      <button onclick="showDialog()" class="dang-tin">Đăng tin</button>
+
+      <button class="dang-nhap" onclick="loginHome()">Đăng nhập</button>
+
+      <button class="dang-ky" onclick="registerHome()">Đăng ký</button>
+    </header>
+    <div class="banner">
+      <div class="banner-content">
+        <h1>SCLOUDY CO-OPERATION COMPANY</h1>
+        <p style="font-size: 22px">
+          Established from 2018 until now, we always provide our customers with
+          the best service. Specializing in real estate brokerage for sale or
+          rent, visa extension, self-drive car rental, confident to be the
+          leader in this field. field in Da Nang, where people's needs are
+          connected, giving you the best experiences. Has been accompanying
+          large and small businesses over the past time "Everywhere you need"
+        </p>
+      </div>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 8</div>
+          <img class="img-slide" src="../Img/mmmm.png" style="width: 100%" />
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 8</div>
+          <img
+            class="img-slide"
+            src="../Img/Untitled.png"
+            style="width: 100%"
+          />
+          <div class="text">Caption Two</div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 8</div>
+          <img
+            class="img-slide"
+            src="../Img/41033730_527785390978354_6880045834436608000_o.jpg"
+            style="width: 100%"
+          />
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 8</div>
+          <img
+            class="img-slide"
+            src="../Img/41223298_527785190978374_2496102561413595136_o.jpg"
+            style="width: 100%"
+          />
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">5 / 8</div>
+          <img
+            class="img-slide"
+            src="../Img/40978504_527785207645039_4139740280205082624_o.jpg"
+            style="width: 100%"
+          />
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">6 / 8</div>
+          <img
+            class="img-slide"
+            src="../Img/41223298_527785190978374_2496102561413595136_o.jpg"
+            style="width: 100%"
+          />
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">7 / 8</div>
+          <img
+            class="img-slide"
+            src="../Img/40988435_527785327645027_3625852537069895680_o.jpg"
+            style="width: 100%"
+          />
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">8 / 8</div>
+          <img
+            class="img-slide"
+            src="../Img/40760694_527785264311700_3930827027908657152_o.jpg"
+            style="width: 100%"
+          />
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      </div>
+      <br />
+
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+      </div>
+      <!-- script slide -->
+      <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides((slideIndex += n));
+        }
+
+        function currentSlide(n) {
+          showSlides((slideIndex = n));
+        }
+
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {
+            slideIndex = 1;
+          }
+          if (n < 1) {
+            slideIndex = slides.length;
+          }
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " active";
+        }
+      </script>
+    </div>
+    <aside>
+      <p>WELCOME !</p>
+      <h2>The benefit of using our CAR SERVICE</h2>
+      <div class="aside-content">
+        <div class="card-aside">
+          <img src="../Img/icon/Icon.png" alt="" />
+          <h3>Professional & Fast</h3>
+          <p>
+            Search and hire the most talented EMPLOYER to match your needs. No
+            matter what you need done, we've got the perfect CAR for you.
+          </p>
+        </div>
+        <div class="card-aside">
+          <img src="../Img/icon/Icon (1).png" alt="" />
+          <h3>24/7 support</h3>
+          <p>
+            You have any concerns or questions? Don’t worry, we have our SUPPORT
+            team to help you at ANYTIME and ANYWHERE.
+          </p>
+        </div>
+        <div class="card-aside">
+          <img src="../Img/icon/Icon (2).png" alt="" />
+          <h3>Safe & Secure</h3>
+          <p>
+            We know that safety is the most IMPORTANT thing for our customer, so
+            all of our PAYMENTS are processed instantly and securely.
+          </p>
+        </div>
+      </div>
+    </aside>
+    <main>
+      <section class="section-left">
+        <div class="content-left-01">
+          <div class="content-a">
+            <h2>SIÊU XE</h2>
+            <p>Top 10 siêu xe được ưa chuộng nhất thị trường quốc tế.</p>
+            <button class="button-xem-them">Xem thêm</button>
+          </div>
+          <div class="content-b">
+            <img src="../Img/xe/anh-sieu-xe-4k-19-1024x576.jpg" alt="" />
+          </div>
+        </div>
+        <div class="content-left-02">
+          <div class="content-c">
+            <h2>Ô TÔ DÀNH CHO BẠN</h2>
+            <p>
+              Kết nối nhu cầu mua bán xe ô tô trên toàn quốc và quốc tế,giấy tờ
+              đầy đủ,đảm bảo nhu cầu về số lượng và chất lượng ,đáp ứng mọi nhu
+              cầu của khách hàng dù là khách hàng khó tính nhất.
+            </p>
+            <button class="button-xem-them">Xem thêm</button>
+          </div>
+          <div class="content-d">
+            <img src="../Img/xe/c300-amg-32-3704.jpg" alt="" />
+          </div>
+        </div>
+        <div class="content-left-03">
+          <div class="content-e">
+            <h2>DỊCH VỤ CHO THUÊ XE OTO</h2>
+            <p>
+              Chúng tôi cung cấp cho bạn dịch vụ cho thuê xe ô tô tốt nhất thị
+              trường,cho thuê ngày,thuê tháng,cho thuê xe tự lái,...
+            </p>
+            <button class="button-xem-them">Xem thêm</button>
+          </div>
+          <div class="content-f">
+            <img src="../Img/images5426900_1.jpg" alt="" />
+          </div>
+        </div>
+        <div class="content-left-04">
+          <div class="content-g">
+            <h2>DỊCH VỤ BẢO HIỂM XE Ô TÔ</h2>
+            <p>
+              Dịch vụ bảo hiểm tốt nhất,bảo hiểm thân vỏ,bảo hiểm toàn bộ,hỗ trợ
+              24/24,chiết khấu cao và hỗ trợ tuyệt đối cho khách hàng.
+            </p>
+            <button class="button-xem-them">Xem thêm</button>
+          </div>
+          <div class="content-h">
+            <img src="../Img/xe/bao-hiem-oto.jpg" alt="" />
+          </div>
+        </div>
+      </section>
+      <section class="section-right">
+        <div class="section-right-tittle"><h2>Tin mới cập nhật</h2></div>
+        <div class="tin-moi">
+          <div class="tin-moi-01">
+            <a href=""
+              >Gia đình tôi có chiếc xe Pajero 8 chỗ, 2003 xe của Nhật Bản kim
+              phun điện tử, 2 cầu đi được mọi địa hình...</a
+            >
+          </div>
+          <div class="tin-moi-02">
+            <a href=""
+              >2015 - Mitsubishi Fuso Canter 4.99 - Xe tải Mitsubishi 1T8 máy</a
+            >
+          </div>
+          <div class="tin-moi-03">
+            <a href=""
+              >2022 - Mitsubishi Triton 4x2 AT Mivec - Sẵn xe - Khuyến mại cực
+              lớn</a
+            >
+          </div>
+          <div class="tin-moi-04">
+            <a href=""
+              >2019 - Mitsubishi Xpander 1.5 AT - Odo 5v km xịn, sơ cua chưa hạ,
+              giá chỉ hơn 5đ tẹo</a
+            >
+          </div>
+          <div class="tin-moi-05">
+            <a href="">
+              4.2 tỷ Nhà 60m2 Hướng Đông Nam 4 tầng TĐC Xi Măng, Hùng Vương,
+              Hồng Bàng.</a
+            >
+          </div>
+          <div class="tin-moi-06">
+            <a href=""
+              >2022 - Mitsubishi Triton 4x2 AT Mivec - Giá siêu sập sàn - Tặng
+              full phụ kiện</a
+            >
+          </div>
+          <div class="tin-moi-07">
+            <a href=""
+              >2022 - Mitsubishi Outlander 2.0 CVT Premium - Giá siêu ưu đãi,
+              nhấc máy gọi có xe ngay trong ngày</a
+            >
+          </div>
+          <div class="tin-moi-08">
+            <a href=""
+              >2022 - Mitsubishi Attrage MT - Xe sẵn giao ngay - Giá cả tốt
+              nhất</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <sub>
+      <div class="sub-left">
+        <form action="">
+          <fieldset>
+            <legend><h3>Bạn Cần gì</h3></legend>
+            <label for="fname">Họ và tên</label>
+            <input type="text" id="name" name="name" /><br /><br />
+            <label for="Số điện thoại">Số điện thoại</label>
+            <input
+              type="text"
+              id="Số điện thoại"
+              name="Số điện thoại"
+            /><br /><br />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" /><br /><br />
+            <label for="birthday">Ngày sinh</label>
+            <input type="date" id="birthday" name="birthday" /><br /><br />
+            <label for="browser">Bạn muốn</label>
+            <input list="browsers" name="browser" id="browser" />
+            <datalist id="browsers">
+              <option value="Mua xe"></option>
+              <option value="Bán xe"></option>
+              <option value="dịch vụ thuê xe"></option>
+              <option value="Bảo hiểm xe"></option>
+            </datalist>
+            <br /><br />
+            <textarea
+              name="noi-dung-form"
+              id="noi-dung-form"
+              cols="40"
+              rows="10"
+              placeholder="Nhập nội dung..."
+            ></textarea>
+            <br />
+            <input type="submit" class="submit-form" value="Submit" />
+          </fieldset>
+        </form>
+      </div>
+      <div class="sub-right">
+        <h2>XE ĐƯỢC ƯA CHUỘNG NHẤT</h2>
+        <div class="album-xe">
+          <div class="gallery">
+            <a
+              target="_blank"
+              href="../Img/xe/Mazda32020VnE993047211573621051jpg-1631963909.jpg"
+            >
+              <img
+                src="../Img/xe/Mazda32020VnE993047211573621051jpg-1631963909.jpg"
+                alt="Cinque Terre"
+              />
+            </a>
+            <div class="desc">mazda 3</div>
+          </div>
+
+          <div class="gallery">
+            <a target="_blank" href="../Img/xe/cx5.jpg">
+              <img src="../Img/xe/cx5.jpg" alt="Forest" />
+            </a>
+            <div class="desc">mazda cx5</div>
+          </div>
+
+          <div class="gallery">
+            <a target="_blank" href="../Img/xe/xpander-at-2022-5-9579.jpg">
+              <img
+                src="../Img/xe/xpander-at-2022-5-9579.jpg"
+                alt="Northern Lights"
+              />
+            </a>
+            <div class="desc">Xpander 2022</div>
+          </div>
+
+          <div class="gallery">
+            <a target="_blank" href="../Img/xe/c300-amg-32-3704.jpg">
+              <img src="../Img/xe/c300-amg-32-3704.jpg" alt="Mountains" />
+            </a>
+            <div class="desc">Mec c300 amg</div>
+          </div>
+        </div>
+        <div class="album-nha">
+          <div class="gallery">
+            <a target="_blank" href="../Img/xe/audi-a4-2020-114400.jpg">
+              <img src="../Img/xe/audi-a4-2020-114400.jpg" alt="Cinque Terre" />
+            </a>
+            <div class="desc">audi a4</div>
+          </div>
+
+          <div class="gallery">
+            <a target="_blank" href="../Img/xe/q5-123632.jpg">
+              <img src="../Img/xe/q5-123632.jpg" alt="Forest" />
+            </a>
+            <div class="desc">audi Q5</div>
+          </div>
+
+          <div class="gallery">
+            <a target="_blank" href="../Img/xe/glc200-18--173032.jpg">
+              <img
+                src="../Img/xe/glc200-18--173032.jpg"
+                alt="Northern Lights"
+              />
+            </a>
+            <div class="desc">Mec GLC 200</div>
+          </div>
+
+          <div class="gallery">
+            <a target="_blank" href="../Img/xe/peuguot 3008.jpg">
+              <img src="../Img/xe/peuguot 3008.jpg" alt="Mountains" />
+            </a>
+            <div class="desc">Peugot 3008 GT</div>
+          </div>
+        </div>
+      </div>
+    </sub>
+    <!-- sub2 -->
+    <div class="sub2">
+      <h1>DANH SÁCH XE Ô TÔ</h1>
+      <div id="list-card"></div>
+
+      <!-- dialog form -->
+      <div id="dialogMainId" class="dialogMain">
+        <div class="dialogDiv">
+          <h2 id="dialog_title" class="h2">Nhập vào sản phẩm</h2>
+          <label for="">Loại xe:</label>
+          <input type="text" id="car" placeholder="nhập vào loại xe" />
+          <label for="">Hãng xe:</label>
+          <input type="text" id="brand" placeholder="nhập vào hãng xe" />
+          <label for="">Giá xe:</label>
+          <input type="text" id="price" placeholder="nhập vào giá" />
+          <label for="">Năm sản xuất:</label>
+          <input type="text" id="age" placeholder="đời xe" />
+          <label for="">Tỉnh thành:</label>
+          <input type="text" id="city" placeholder="đăng kiểm tại" />
+          <label for="">Số kilomet:</label>
+          <input type="text" id="kilometer" placeholder="số km đã chạy" />
+          <input type="file" id="imgInput" />
+          <div class="flex flex-space-between">
+            <button type="button" id="close_dialog" onclick="hideDialog()">
+              Close
+            </button>
+            <button type="button" id="confirm_dialog" onclick="submit()">
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- logo-action -->
+    <div class="logo-action">
+      <img src="../Img/logo/Mercedes-Benz.png" alt="" />
+      <img src="../Img/logo/logo-volvo.jpg" alt="" />
+      <img src="../Img/logo/logo-mazda.jpg" alt="" />
+      <img src="../Img/logo/logo-acura.png" alt="" />
+      <img src="../Img/logo/1e943b24-20191025_061910.jpg" alt="" />
+    </div>
+    <footer>
+      <div class="footer-left">
+        <p>Tạp chí điện tử Tri thức trực tuyến</p>
+        <p>Cơ quan chủ quản: Hội Xuất bản Việt Nam</p>
+        <p>
+          Giấy phép báo chí: số 75/GP-BTTTT do Bộ Thông tin và Truyền thông cấp
+          ngày 26/02/2020
+        </p>
+        <p>Phó tổng biên tập phụ trách: Lê Hoàng Sơn</p>
+        <p>© Toàn bộ bản quyền thuộc Tri thức trực tuyến</p>
+      </div>
+      <div class="footer-right">
+        <p>Contact: +8434750042 .</p>
+        <p>Email: lehoangson1311@gmail.com .</p>
+        <p>Address: 21 Nam Sơn 2,quận Hải Châu,Đà Nẵng .</p>
+        <p>Facebook: Scloudy.coo .</p>
+      </div>
+    </footer>
+  </body>
+  <script src="./trang-chu.js"></script>
+</html>
