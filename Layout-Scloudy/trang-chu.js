@@ -6,9 +6,9 @@ function registerHome() {
   window.location = "http://127.0.0.1:5500/register.html";
 }
 // vòng lặp để lấy thông tin
-let list = [];
+let list = [{}];
 const postListCar = JSON.parse(localStorage.getItem("listCar"));
-list = postListCar;
+list = postListCar || [];
 const listCar = document.getElementById("list-card");
 
 // render lại list
@@ -17,23 +17,23 @@ function loop() {
   for (let i = 0; i < list.length; i++) {
     const elementCar = document.createElement("div");
     elementCar.innerHTML = `<div class="card-sub2">
-    <img src="${list[i].imgInput}" alt="" />
-    <div class="text-card">
-      <div class="text-content-left">
-        <p>Loại xe: ${list[i].car}</p>
-        <p>Hãng xe: ${list[i].brand}</p>
-        <p>Năm sản xuất:  ${list[i].age}</p>
+      <img src="${list[i].imgInput}" alt="" />
+      <div class="text-card">
+        <div class="text-content-left">
+          <p>Loại xe: ${list[i].car}</p>
+          <p>Hãng xe: ${list[i].brand}</p>
+          <p>Năm sản xuất:  ${list[i].age}</p>
+        </div>
+        <div class="text-content-right">
+          <p>tỉnh thành:${list[i].city}</p>
+          <p>giá: ${list[i].price}</p>
+          <p>số km đã chạy: ${list[i].kilometer}</p>
+        </div>
       </div>
-      <div class="text-content-right">
-        <p>tỉnh thành:${list[i].city}</p>        
-        <p>giá: ${list[i].price}</p>
-        <p>số km đã chạy: ${list[i].kilometer}</p>
-      </div>
-    </div>
-    <div class="btnDelete">
-     <button class="delete" onclick="removeItem(${i})" ><span class="text">Delete</span></button>
-     </div>
-  </div>`;
+      <div class="btnDelete">
+       <button class="delete" onclick="removeItem(${i})" ><span class="text">Delete</span></button>
+       </div>
+    </div>`;
     listCar.appendChild(elementCar);
   }
 }
